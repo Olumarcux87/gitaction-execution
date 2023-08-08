@@ -158,7 +158,7 @@ jobs:
         run: echo "Deploying..."
   report:
     if: failure()
-    runa-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |
