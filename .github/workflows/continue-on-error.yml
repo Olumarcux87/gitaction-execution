@@ -1,5 +1,5 @@
 # Ignoring errors & failure with "Continue-on-error"
-name: Website Deployment
+name: Continue Website Deployment
 on:
   push:
     branches:
