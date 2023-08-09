@@ -16,27 +16,28 @@
 #               run: npm run build
 
 
-# Incorporating Matrix strategies from Above Config
-name: Matrix Demo
-on: push
-jobs:
-    build:
-        strategy:
-            matrix:
-                node-version: [12, 13, 14, 16]   #adding any keys of our choice, we could specify multiple node versions
-                operating-system: [ubuntu-latest, windows-latest]  #We could specify multiple OS version here too
-        runs-on: ${{ matrix.operating-system }}
-        steps:
-            - name: Get Code
-              uses: actions/checkout@v3
-            - name: Install NodeJS
-              uses: actions/set-up-node@v3
-              with:
-                node-version: ${{ matrix.node-version }}
-            - name: Install Dependencies
-              run: npm install
-            - name: Build Project
-              run: npm run build
+
+# # Incorporating Matrix strategies from Above Config
+# name: Matrix Demo
+# on: push
+# jobs:
+#     build:
+#         strategy:
+#             matrix:
+#                 node-version: [12, 13, 14, 16]   #adding any keys of our choice, we could specify multiple node versions
+#                 operating-system: [ubuntu-latest, windows-latest]  #We could specify multiple OS version here too
+#         runs-on: ${{ matrix.operating-system }}
+#         steps:
+#             - name: Get Code
+#               uses: actions/checkout@v3
+#             - name: Install NodeJS
+#               uses: actions/set-up-node@v3
+#               with:
+#                 node-version: ${{ matrix.node-version }}
+#             - name: Install Dependencies
+#               run: npm install
+#             - name: Build Project
+#               run: npm run build
 
 
 
